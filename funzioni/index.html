@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Rocco De Patto">
+  <title>Javascript Base   Sinervis</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <link rel="stylesheet" href="reveal.js/css/theme/solarized.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+  <h1 class="title">Javascript Base <br> Sinervis</h1>
+  <h2 class="author">Rocco De Patto</h2>
+  <h3 class="date">Novembre 7, 2017</h3>
+</section>
+
+<section><section id="metodifunzioni" class="titleslide slide level1"><h1>Metodi/Funzioni</h1></section><section id="funzioni" class="slide level2">
+<h1>Funzioni</h1>
+<style>
+    div.sourceCode {
+        font-size: 1.3em;
+    }
+
+    .reveal {
+        font-size: 27px;
+        color: #2d373a;
+    }
+
+    .reveal p {
+        text-align: left;
+    }
+
+    .reveal blockquote {
+        text-align: left;
+        padding-left: 45px;
+        font-size: 1.3em;
+        border-left: 5px solid;
+        background: #eee;
+    }
+
+    body {
+        background: white;
+    }
+
+    .container {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .container textarea {
+        width: 50%;
+    }
+
+    .container .output {
+        width: 50%;
+    }
+
+    .reveal pre.sourceCode {
+        width: 100%;
+        box-shadow: none;
+        border: 1px solid #bbb;
+        border-left: 5px solid #bbb;
+        background: #f5f5f5;
+        padding: 5px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+
+    li > code,
+    p  > code {
+        border-radius: 6px;
+        color: black;
+        background: #f4f4f4;
+        padding: 0px 4px !important;
+    }
+</style>
+<p>In javascript è possibile creare delle funzioni per contenere del codice da poter richiamare a nostro piacimento da altre parti.</p>
+<p>Per dichiarare una funzione si usa la seguente sintassi:</p>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">function</span> <span class="at">nomeFunzione</span> () <span class="op">{</span>
+
+<span class="op">}</span></code></pre></div>
+</section><section id="funzioni-1" class="slide level2">
+<h1>Funzioni</h1>
+<p>Vogliamo mostrare un popup di errore ogni volta che l'utente sbaglia qualcosa nella compilazione di un form.</p>
+<p>Possiamo immaginare che questa operazione serva in piu' posti nel nostro codice (lunghezza minima password, mail corretta.)</p>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">function</span> <span class="at">mostraErrore</span> () <span class="op">{</span>
+    <span class="at">alert</span>(<span class="st">&quot;Form non valido!&quot;</span>)<span class="op">;</span>
+<span class="op">}</span>
+
+<span class="co">// per richiamarla:</span>
+<span class="at">mostraErrore</span>()<span class="op">;</span></code></pre></div>
+</section><section id="funzioni-2" class="slide level2">
+<h1>Funzioni</h1>
+<p>Vogliamo poter mostrare all'utente anche quale campo non è valido. Per fortuna nelle funzioni possiamo specificare degli argomenti:</p>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">function</span> <span class="at">mostraErrore</span> (campoNonValido) <span class="op">{</span>
+    <span class="at">alert</span>(<span class="st">&quot;Form non valido! Controlla il campo: &quot;</span> <span class="op">+</span> campoNonValido)<span class="op">;</span>
+<span class="op">}</span>
+
+<span class="co">// per richiamarla</span>
+<span class="at">mostraErrore</span>(<span class="st">&quot;password&quot;</span>)<span class="op">;</span></code></pre></div>
+</section><section id="funzioni-3" class="slide level2">
+<h1>Funzioni</h1>
+<p>Possiamo utilizzare quanti parametri vogliamo:</p>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">function</span> <span class="at">mostraErrore</span> (campoNonValido<span class="op">,</span> tipoErrore) <span class="op">{</span>
+    <span class="at">alert</span>(<span class="st">&quot;Form non valido: &quot;</span> <span class="op">+</span> campoNonValido <span class="op">+</span> <span class="st">&quot; &quot;</span> <span class="op">+</span> tipoErrore)<span class="op">;</span>
+<span class="op">}</span>
+
+<span class="co">// per richiamarla:</span>
+<span class="at">mostraErrore</span>(<span class="st">&quot;password&quot;</span><span class="op">,</span> <span class="st">&quot;troppo corta&quot;</span>)<span class="op">;</span></code></pre></div>
+</section><section id="valori-di-ritorno" class="slide level2">
+<h1>Valori di ritorno</h1>
+<p>Mostrare dialoghi, o scrivere a schermo sono <code>side effect</code>.</p>
+<p>Molte funzioni sono utili proprio per questo, ma le funzioni possono produrre anche <strong>valori</strong>.</p>
+<p>Quando una funzione produce un valore, questo di chiama <strong>valore di ritorno</strong> e si dice che la funzione <strong>ritorna</strong> quel dato valore.</p>
+</section><section id="valori-di-ritorno-1" class="slide level2">
+<h1>Valori di ritorno</h1>
+<p>Ad esempio la funzione <code>Math.max</code> ritorna il numero massimo tra gli <strong>argomenti</strong> che gli vengono passati tra parentesi:</p>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> etaMassima <span class="op">=</span> <span class="va">Math</span>.<span class="at">max</span>(<span class="dv">20</span><span class="op">,</span> <span class="dv">25</span><span class="op">,</span> <span class="dv">26</span>)<span class="op">;</span>
+<span class="at">alert</span>(etaMassima)<span class="op">;</span></code></pre></div>
+</section><section id="valori-di-ritorno-2" class="slide level2">
+<h1>Valori di ritorno</h1>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> nomeUtente <span class="op">=</span> <span class="st">&quot;Mario&quot;</span><span class="op">;</span>
+
+<span class="kw">var</span> nomeUtenteMaiuscolo <span class="op">=</span> <span class="va">nomeUtente</span>.<span class="at">toUpperCase</span>()<span class="op">;</span></code></pre></div>
+<p>la funzione toUpperCase() <strong>ritorna</strong> la stringa nomeUtente in maiuscolo.</p>
+</section><section id="valori-di-ritorno-3" class="slide level2">
+<h1>Valori di ritorno</h1>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> giornoSettimana <span class="op">=</span> <span class="st">&#39;Lunedì&#39;</span><span class="op">;</span>
+<span class="kw">var</span> abbreviato <span class="op">=</span> <span class="va">giornoSettimana</span>.<span class="at">substr</span>(<span class="dv">0</span><span class="op">,</span> <span class="dv">3</span>)<span class="op">;</span>
+<span class="at">alert</span>(abbreviato)<span class="op">;</span></code></pre></div>
+<p><a href="https://www.w3schools.com/jsref/jsref_substr.asp">substr</a> <strong>ritorna</strong> una parte di stringa.</p>
+</section><section id="valori-di-ritorno-4" class="slide level2">
+<h1>Valori di ritorno</h1>
+<p>Anche le funzioni che creiamo noi possono avere dei valori di ritorno.</p>
+<p>Per poter specificare dei valori di ritorno si usa la parola <code>return</code>:</p>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="co">// questa funziona calcola l&#39;iva</span>
+<span class="kw">function</span> <span class="at">calcolaIVA</span> (prezzo) <span class="op">{</span>
+    <span class="kw">var</span> iva <span class="op">=</span> prezzo/<span class="dv">100</span><span class="op">*</span><span class="dv">22</span><span class="op">;</span>
+    <span class="cf">return</span> iva<span class="op">;</span>
+<span class="op">}</span>
+
+<span class="at">calcolaIVA</span>(<span class="dv">220</span>)<span class="op">;</span></code></pre></div>
+</section><section id="esercizio" class="slide level2">
+<h1>Esercizio</h1>
+<ul>
+<li>La funzione calcolaIVA deve prevedere un cambio di iva.</li>
+</ul>
+</section></section>
+<section><section id="dom-in-js" class="titleslide slide level1"><h1>DOM in JS</h1></section><section id="riferirsi-ad-un-elemento" class="slide level2">
+<h1>Riferirsi ad un elemento</h1>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> barraDiNavigazione <span class="op">=</span> <span class="va">document</span>.<span class="at">getElementById</span>(<span class="st">&#39;id&#39;</span>)<span class="op">;</span>
+<span class="va">barraDiNavigazione</span>.<span class="va">style</span>.<span class="at">color</span> <span class="op">=</span> <span class="st">&quot;red&quot;</span><span class="op">;</span></code></pre></div>
+</section><section id="riferirsi-ad-un-elemento-1" class="slide level2">
+<h1>Riferirsi ad un elemento</h1>
+<div class="sourceCode"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span class="kw">var</span> inputNomeUtente <span class="op">=</span> <span class="va">document</span>.<span class="at">getElementById</span>(<span class="st">&#39;nomeUtente&#39;</span>)<span class="op">;</span>
+<span class="at">alert</span>(<span class="st">&quot;Ciao &quot;</span> <span class="op">+</span> <span class="va">inputNomeUtente</span>.<span class="at">value</span>)<span class="op">;</span></code></pre></div>
+</section><section id="eventi-nel-dom" class="slide level2">
+<h1>Eventi nel DOM</h1>
+<p>agli elementi del DOM possiamo assegnare delle funzioni da eseguire in determinati eventi:</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html"><span class="kw">&lt;button</span><span class="ot"> onclick=</span><span class="st">&quot;faiQuesto()&quot;</span><span class="kw">&gt;&lt;/a&gt;</span></code></pre></div>
+</section><section id="esercizio-1" class="slide level2">
+<h1>Esercizio:</h1>
+<p>Alla pressione di un bottone, cambio il colore del background casualmente (ma in tonalita' di rosso)</p>
+</section></section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
