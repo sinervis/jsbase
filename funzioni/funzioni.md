@@ -115,11 +115,12 @@ function mostraErrore (campoNonValido, tipoErrore) {
 mostraErrore("password", "troppo corta");
 ```
 
-## Funzioni
 ## Valori di ritorno
 Mostrare dialoghi, o scrivere a schermo sono `side effect`.
+
 Molte funzioni sono utili proprio per questo, ma le funzioni
 possono produrre anche **valori**.  
+
 Quando una funzione produce un valore, questo di chiama
 __valore di ritorno__ e si dice che la funzione __ritorna__
 quel dato valore.  
@@ -133,7 +134,7 @@ var etaMassima = Math.max(20, 25, 26);
 alert(etaMassima);
 ```
 
-## Valori di ritorno // stringhe
+## Valori di ritorno
 
 ```javascript
 var nomeUtente = "Mario";
@@ -142,28 +143,54 @@ var nomeUtenteMaiuscolo = nomeUtente.toUpperCase();
 ```
 la funzione toUpperCase() __ritorna__ la stringa nomeUtente in maiuscolo.
 
-## Valori di ritorno // stringhe
+## Valori di ritorno
 
 ```javascript
 var giornoSettimana = 'Lunedì';
 var abbreviato = giornoSettimana.substr(0, 3);
+alert(abbreviato);
 ```
 [substr](https://www.w3schools.com/jsref/jsref_substr.asp) __ritorna__ una parte di stringa.
 
-## Funzioni
+## Valori di ritorno
+Anche le funzioni che creiamo noi possono avere dei valori di ritorno.
+
+Per poter specificare dei valori di ritorno si usa la parola `return`:
 
 ```javascript
-function ...
+// questa funziona calcola l'iva
+function calcolaIVA (prezzo) {
+	var iva = prezzo/100*22;
+	return iva;
+}
+
+calcolaIVA(220);
 ```
 
+## Esercizio
+- La funzione calcolaIVA deve prevedere un cambio di iva.
+
 # DOM in JS
-## La base
+## Riferirsi ad un elemento
 ```javascript
 var barraDiNavigazione = document.getElementById('id');
 barraDiNavigazione.style.color = "red";
 ```
 
+## Riferirsi ad un elemento
+```javascript
+var inputNomeUtente = document.getElementById('nomeUtente');
+alert("Ciao " + inputNomeUtente.value);
+```
+
 ## Eventi nel DOM
+agli elementi del DOM possiamo assegnare delle funzioni da eseguire
+in determinati eventi:
+
 ```html
 <button onclick="faiQuesto()"></a>
 ```
+
+## Esercizio:
+Alla pressione di un bottone, cambio il colore del background
+casualmente (ma in tonalita' di rosso)
