@@ -203,9 +203,10 @@ coseDaFare.push(task);
 ```
 
 ## Mostare la lista
-- Dove lo mostro? Una lista, perfetto un `<ul> <li>...`
+Dove lo mostro? Una lista, perfetto un `<ul> <li>...`
 
-- Per ogni task ripeto:
-  - Mostro il titolo
-  - Imposto il colore secondo la priorita'
-  - Se e' fatto, linea in mezzo e in grigio
+Per ogni task ripeto:
+
+- Mostro il titolo
+- Imposto il colore secondo la priorita'
+- Se e' fatto, linea in mezzo e in grigio
